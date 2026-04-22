@@ -11,23 +11,8 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect(process.env.MONG_URI)
-  .then(() => {
-    app.listen(process.env.PORT || 4000, () => {
-      console.log("Server running and connected to DB");
-    });
-  })
-  .catch((err) => console.error("DB connection error:", err));
-
-// Helper to fetch JSON
-async function fetch_json(url) {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-  return res.json();
-}
-
 
 // POST /api/profiles
-
 app.post("/api/profiles", async (req, res) => {
   const name = req.body?.name?.trim();
 
