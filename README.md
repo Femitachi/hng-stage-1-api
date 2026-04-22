@@ -1,5 +1,4 @@
-﻿# hng-stage-1-api
- # HNG Stage 1 API
+﻿# HNG Stage 1 API
 
 A REST API built with Express and MongoDB that generates a profile from a person's name using three external APIs:
 
